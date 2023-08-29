@@ -1,8 +1,10 @@
 import { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { SearchBar} from './components/SearchBar/SearchBar';
 import { MoviePreview } from './components/MoviePreview/MoviePreview';
 import { MovieList } from './components/MovieList/MovieList';
+import { Navbar } from './components/Navbar/Navbar';
 
 
 export const App = () => {
@@ -70,7 +72,7 @@ export const App = () => {
 
     return (
         <div>
-            <h2 className="text-center mt-5 mb-5">Trailer Popular Movies</h2>
+            <Navbar brand={"Film Catalog"}/>
             <SearchBar searchMovies={searchMovies} setSearchKey={setSearchKey} />
             <MoviePreview
                 movie={movie}
