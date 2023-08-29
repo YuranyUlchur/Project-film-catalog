@@ -1,17 +1,17 @@
-import { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { SearchBar} from './components/SearchBar/SearchBar';
 import { MoviePreview } from './components/MoviePreview/MoviePreview';
 import { MovieList } from './components/MovieList/MovieList';
 import { Navbar } from './components/Navbar/Navbar';
+import './App.css';
+
 
 
 export const App = () => {
     const API_URL = "https://api.themoviedb.org/3";
     const API_KEY = "4f5f43495afcc67e9553f6c684a82f84";
     const IMAGE_PATH = "https://image.tmdb.org/t/p/original";
-    const URL_IMAGE = "https://image.tmdb.org/t/p/original";
 
     const [movies, setMovies] = useState([]);
     const [searchKey, setSearchKey] = useState("");
@@ -19,14 +19,14 @@ export const App = () => {
     const [movie, setMovie] = useState({ title: "Loading Movies" });
     const [playing, setPlaying] = useState(false);
 
-    const fetchMovies = useCallback(async (searchKey) => {
-        const type = searchKey ? "search" : "discover";
+    const fetchMovies = useCallback(async (searchTerm) => {
+        const type = searchTerm ? "search" : "discover";
         const {
             data: { results },
         } = await axios.get(`${API_URL}/${type}/movie`, {
             params: {
                 api_key: API_KEY,
-                query: searchKey,
+                query: searchTerm,
             },
         });
 
@@ -61,9 +61,9 @@ export const App = () => {
         window.scrollTo(0, 0);
     };
 
-    const searchMovies = (e) => {
-        e.preventDefault();
-        fetchMovies(searchKey);
+    const handleSearch = (term) => {
+        setSearchKey(term);
+        fetchMovies(term);
     };
 
     useEffect(() => {
@@ -71,17 +71,26 @@ export const App = () => {
     }, [fetchMovies]);
 
     return (
-        <div>
-            <Navbar brand={"Film Catalog"}/>
-            <SearchBar searchMovies={searchMovies} setSearchKey={setSearchKey} />
-            <MoviePreview
-                movie={movie}
-                playing={playing}
-                trailer={trailer}
-                setPlaying={setPlaying}
-                IMAGE_PATH={IMAGE_PATH}
-            />
-            <MovieList movies={movies} selectMovie={selectMovie} URL_IMAGE={URL_IMAGE} />
+        <div className="boxapp">
+            <div style={{ 
+                position: 'relative',
+                overflow: 'hidden',
+                backgroundImage: `url("${IMAGE_PATH}${movie.backdrop_path}")`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                height: '700px',
+            marginBottom: '20px',
+            }}>
+                <Navbar onSearch={handleSearch} />
+                <MoviePreview
+                    movie={movie}
+                    playing={playing}
+                    trailer={trailer}
+                    setPlaying={setPlaying}
+                    IMAGE_PATH={IMAGE_PATH}
+                />
+            </div>
+            <MovieList movies={movies} selectMovie={selectMovie} URL_IMAGE={IMAGE_PATH} />
         </div>
     );
-}
+};

@@ -1,4 +1,6 @@
 import React from 'react';
+import './MovieList.module.css';
+
 
 export const MovieList = ({ movies, selectMovie, URL_IMAGE }) => {
     return (
@@ -16,7 +18,7 @@ export const MovieList = ({ movies, selectMovie, URL_IMAGE }) => {
                             height={600}
                             width="100%"
                         />
-                        <h4 className="text-center">{movie.title}</h4>
+                        <h4 className="">{movie.title}</h4>
                     </div>
                 ))}
             </div>
