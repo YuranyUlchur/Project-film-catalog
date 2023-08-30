@@ -45,7 +45,10 @@ export const Navbar = ({ onSearch }) => {
                             </ul>
                         </li>
                     </ul>
-                    <SearchBar searchMovies={searchMovies} setSearchKey={setSearchKey} onSearch={onSearch} />
+                    <div className="ml-auto">
+                        <SearchBar  searchMovies={searchMovies} setSearchKey={setSearchKey} onSearch={onSearch} />
+
+                    </div>
                 </div>
             </div>
         </nav>

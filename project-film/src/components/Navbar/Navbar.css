@@ -1,14 +1,23 @@
-.containernavbar {
-    margin-top: 10px;
-    display: flex;
+.navbar {
+    color: #fff;
+    margin-bottom: 400px;
+
 }
+
 
 .navbar-brand {
     font-size: 1.5rem;
+    color: #fff;
+    margin-left: 100px;
 }
 
-.collapse {
-    margin-bottom: 350px;
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    margin-right: 20px;
 }
 
 .dropdown-menu {
@@ -19,6 +28,28 @@
     color: #fff;
 }
 
-.dropdown-item:hover {
-    background-color: #555;
+
+
+.containernavbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+
+}
+
+.ml-auto {
+    display: flex;
+    align-items: center;
+
+}
+
+.input-form {
+    color: inherit;
+    padding: .25rem 1rem;
+    border: 1px solid rgba(61, 79, 145, .5);
+    border-radius: 2rem;
+    margin-right: 0.5rem;
+    width: 250px;
+    background-color: rgba(8, 15, 40, .5);
 }

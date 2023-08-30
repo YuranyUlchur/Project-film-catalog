@@ -19,7 +19,7 @@ export const MovieList = ({ movies, selectMovie, URL_IMAGE, onMovieClick }) => {
                             <img
                                 src={`${URL_IMAGE + movie.poster_path}`}
                                 alt=""
-                                height={600}
+                                height={400}
                                 width="100%"
                                 className="movie-poster"
                             />

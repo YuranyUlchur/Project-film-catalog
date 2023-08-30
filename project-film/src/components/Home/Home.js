@@ -83,7 +83,7 @@ export const Home = () => {
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     height: '700px',
-                    marginBottom: '200px',
+                    marginBottom: '100px',
                     opacity: '0.9',
                     
 
