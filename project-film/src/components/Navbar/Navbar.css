@@ -1,48 +1,24 @@
+.containernavbar {
+    margin-top: 10px;
+    display: flex;
+}
+
 .navbar-brand {
-    font-size: 32px;
-    font-weight: bold;
-    color: #f1ecec;
-    margin-left: 40px;
+    font-size: 1.5rem;
 }
 
-.navbar-nav .nav-link {
-    transition: color 0.3s ease;
-
+.collapse {
+    margin-bottom: 350px;
 }
 
-.navbar-nav .nav-link:hover {
-    color: #007bff;
+.dropdown-menu {
+    background-color: #333;
 }
 
 .dropdown-item {
-    color: #212529;
+    color: #fff;
 }
 
-.nav-link{
-    font-size: 25px;
-    font-weight: bold;
-    color: #222121;
-}
-
-.search-button {
-    background-color: #f5a623;
-    color:#f1ecec;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 20px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.search-button:hover {
-    background-color: #e29500;
-}
-
-.search-input {
-    border: 1px solid #333;
-    border-radius: 5px;
-    padding: 8px 10px;
-    font-size: 16px;
-    color: #333;
-    margin-left: 70px;
+.dropdown-item:hover {
+    background-color: #555;
 }

@@ -1,0 +1,41 @@
+.movie-container {
+    background-color: #080f28;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.movie-details-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+
+.movie-image-container {
+    flex: 0 0 40%;
+    padding-right: 70px;
+}
+
+.movie-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    margin: 30px;
+}
+
+.movie-text-container {
+    flex: 1;
+}
+
+.movie-title {
+    color: #f1ecec;
+    font-size: 24px;
+    margin-bottom: 90px;
+}
+
+.movie-description{
+    color: #f1ecec;
+    font-size: 24px;
+    margin-bottom: 90px;
+}

@@ -16,7 +16,7 @@ export const Navbar = ({ onSearch }) => {
 
     return (
         <nav className="navbar navbar-expand-lg ">
-            <div className="container">
+            <div className="containernavbar">
                 <a className="navbar-brand" href="#"><FaFilm /> Film catalog</a>
                 <button
                     className="navbar-toggler"

@@ -1,28 +1,19 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import YouTube from 'react-youtube';
 import styles from './MoviePreview.module.css';
 
-
 export const MoviePreview = ({ movie, playing, trailer, setPlaying, IMAGE_PATH }) => {
-    const navigate = useNavigate();
-
     const playTrailer = () => {
         if (trailer) {
             setPlaying(true);
-            navigate('/trailer');
         }
     };
-
 
     return (
         <div>
             <main className={styles.boxmain}>
                 {movie ? (
-                    <div
-                        className={styles.viewtrailer}
-
-                    >
+                    <div className={styles.viewtrailer}>
                         {playing ? (
                             <>
                                 <YouTube
@@ -49,20 +40,14 @@ export const MoviePreview = ({ movie, playing, trailer, setPlaying, IMAGE_PATH }
                                         "Sorry, no trailer available"
                                     )}
                                 </div>
-                                <div className={styles.boxcontainerdescription}>
-                                    <div className={styles.containerdescription}>
-                                        <h1 className={styles.titlemovie}>{movie.title}</h1>
-                                        <p className={styles.textoverview}>{movie.overview}</p>
-                                    </div>
-                                </div>
+
                             </div>
-
                         )}
+                        
+                        <h1 className={styles.titlemovie}>{movie.title}</h1>
                     </div>
-
                 ) : null}
             </main>
-
         </div>
     );
-}
+};
