@@ -17,8 +17,8 @@ export const MoviePreview = ({ movie, playing, trailer, setPlaying }) => {
         <div className='d-flex container justify-content-center'>
             <main className={styles.boxmain}>
                 {movie ? (
-                    <div className=''>
                         <div className={styles.viewtrailer}>
+                            
                             <div className={styles.boxbuttontrailer}>
                                 <div className={styles.containerbuttontrailer}>
                                     {trailer ? (
@@ -34,7 +34,7 @@ export const MoviePreview = ({ movie, playing, trailer, setPlaying }) => {
                                     )}
                                 </div>
                             </div>
-                            <h1 className={styles.titlemovie}>{movie.title}</h1>
+                            
                             {playing && trailer && (
                                 <>
                                     <YouTube
@@ -53,9 +53,9 @@ export const MoviePreview = ({ movie, playing, trailer, setPlaying }) => {
                                 </>
                             )}
                         </div>
-                    </div>
                 ) : null}
             </main>
+            <h1 className={styles.titlemovie}>{movie.title}</h1>
         </div>
     );
 };

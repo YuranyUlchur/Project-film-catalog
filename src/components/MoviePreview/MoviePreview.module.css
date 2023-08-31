@@ -1,6 +1,12 @@
 /* style MoviePreview.css */
 .boxmain {
-    padding: 20px;
+    width: 100%;
+}
+
+@media (max-width: 828px) {
+    .boxmain {
+        width: 500px;
+    }
 }
 
 .viewtrailer {
@@ -13,6 +19,15 @@
 
 .reproductor {
     margin-top: -300px;
+    margin-left: 250px;
+}
+
+
+@media (max-width: 828px) {
+    .reproductor {
+        margin-top: -300px;
+        margin-left: 0px;
+    }
 }
 
 .buttonclose {
@@ -25,7 +40,13 @@
     font-size: 16px;
     position: absolute;
     bottom: 50px;
-    right: 290px;
+    right: 220px;
+}
+
+@media (max-width: 828px) {
+    .buttonclose {
+        right: 200px;
+    }
 }
 
 .boxbuttontrailer {
@@ -51,7 +72,16 @@
     color: #f1ecec;
     margin-top: 100px;
     position: absolute;
-    bottom: 0;
     left: 50%;
+    top: 70%;
     transform: translateX(-50%);
+    
+}
+
+@media (max-width: 828px) {
+    .titlemovie {
+        top: 50%;
+        left: 58%;
+        width: 300px;
+    }
 }
