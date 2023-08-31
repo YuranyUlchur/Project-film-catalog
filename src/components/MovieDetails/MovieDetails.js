@@ -12,12 +12,7 @@ export const MovieDetails = () => {
     const IMAGE_PATH = "https://image.tmdb.org/t/p/original";
 
     // State declarations
-    const [selectedMovie, setSelectedMovie] = useState(null);
     const [movies, setMovies] = useState([]);
-    const [searchKey, setSearchKey] = useState("");
-    const [trailer, setTrailer] = useState(null);
-    const [playing, setPlaying] = useState(false);
-    const [movieFetch, setMovie] = useState({ title: "Loading Movies..." });
 
     // Fetch movies from API
     const fetchMovies = useCallback(async (searchTerm) => {
@@ -40,21 +35,13 @@ export const MovieDetails = () => {
 
     // Fetch movie details from API
     const fetchMovie = async (id) => {
-        const { data } = await axios.get(`${API_URL}/movie/${id}`, {
+        await axios.get(`${API_URL}/movie/${id}`, {
             params: {
                 api_key: API_KEY,
                 append_to_response: "videos",
             },
         });
 
-        if (data.videos && data.videos.results) {
-            const trailer = data.videos.results.find(
-                (vid) => vid.name === "Official Trailer"
-            );
-            setTrailer(trailer ? trailer : data.videos.results[0]);
-        }
-
-        setMovie(data);
     };
 
     useEffect(() => {
@@ -64,7 +51,6 @@ export const MovieDetails = () => {
 
     // Handle search input
     const handleSearch = (term) => {
-        setSearchKey(term);
         fetchMovies(term);
     };
 

@@ -13,17 +13,11 @@ export const Home = () => {
     const IMAGE_PATH = "https://image.tmdb.org/t/p/original";
 
     // States to manage various aspects of the component
-    const [selectedMovie, setSelectedMovie] = useState(null);
     const [movies, setMovies] = useState([]);
-    const [searchKey, setSearchKey] = useState("");
     const [trailer, setTrailer] = useState(null);
     const [movie, setMovie] = useState({ title: "Loading Movies..." });
     const [playing, setPlaying] = useState(false);
 
-    // Handle movie click event
-    const handleMovieClick = (movie) => {
-        setSelectedMovie(movie);
-    };
 
     // Fetch movies from API based on search term or discover
     const fetchMovies = useCallback(async (searchTerm) => {
@@ -72,7 +66,6 @@ export const Home = () => {
 
     // Handle search
     const handleSearch = (term) => {
-        setSearchKey(term);
         fetchMovies(term);
     };
 
