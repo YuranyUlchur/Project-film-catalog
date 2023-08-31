@@ -1,9 +1,10 @@
 import React from 'react';
-import { Route, Routes} from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Home } from './components/Home/Home';
 import { MovieDetails } from './components/MovieDetails/MovieDetails';
 
+// This is the main component of the application
 export const App = () => {
     return (
         <div className="App">
@@ -12,7 +13,6 @@ export const App = () => {
                 <Route path="movie/:id" element={<MovieDetails />} />
             </Routes>
         </div>
-
     );
 };
 

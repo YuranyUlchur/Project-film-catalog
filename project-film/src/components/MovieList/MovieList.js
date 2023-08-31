@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './MovieList.module.css';
 
 
+// MovieList component definition
 export const MovieList = ({ movies, selectMovie, URL_IMAGE, onMovieClick }) => {
     return (
         <div className="container mt-3">
@@ -23,8 +25,11 @@ export const MovieList = ({ movies, selectMovie, URL_IMAGE, onMovieClick }) => {
                                 width="100%"
                                 className="movie-poster"
                             />
-                            <h4 className="movietitle">{movie.title}</h4>
+
                         </Link>
+                        <div>
+                            <h4 className="movietitle">{movie.title}</h4>
+                        </div>
 
                     </div>
                 ))}

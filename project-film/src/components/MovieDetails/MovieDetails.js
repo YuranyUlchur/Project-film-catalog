@@ -3,21 +3,23 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useParams } from 'react-router-dom';
 import './MovieDetails.css'
-
+import { Navbar } from '../Navbar/Navbar';
 
 export const MovieDetails = () => {
+    // API URLs and keys
     const API_URL = "https://api.themoviedb.org/3";
     const API_KEY = "4f5f43495afcc67e9553f6c684a82f84";
     const IMAGE_PATH = "https://image.tmdb.org/t/p/original";
 
+    // State declarations
     const [selectedMovie, setSelectedMovie] = useState(null);
     const [movies, setMovies] = useState([]);
     const [searchKey, setSearchKey] = useState("");
     const [trailer, setTrailer] = useState(null);
     const [playing, setPlaying] = useState(false);
-    const [movieFetch, setMovie] = useState({ title: "Loading Movies" });
+    const [movieFetch, setMovie] = useState({ title: "Loading Movies..." });
 
-
+    // Fetch movies from API
     const fetchMovies = useCallback(async (searchTerm) => {
         const type = searchTerm ? "search" : "discover";
         const {
@@ -36,6 +38,7 @@ export const MovieDetails = () => {
         }
     }, [API_URL, API_KEY]);
 
+    // Fetch movie details from API
     const fetchMovie = async (id) => {
         const { data } = await axios.get(`${API_URL}/movie/${id}`, {
             params: {
@@ -55,32 +58,52 @@ export const MovieDetails = () => {
     };
 
     useEffect(() => {
+        // Initial fetch of movies
         fetchMovies();
     }, [fetchMovies]);
 
+    // Handle search input
+    const handleSearch = (term) => {
+        setSearchKey(term);
+        fetchMovies(term);
+    };
+
+    // Get movie ID from URL parameters
     const { id } = useParams();
     const movie = movies.find(movie => movie.id === Number(id));
 
     if (!movie) {
+        // Display message if movie not found
         return <p>No se encontró la película</p>;
     }
 
+    // Render movie details
     return (
-        <div className="movie-container">
-            <div className="movie-details-container">
-                <div className="movie-image-container">
-                    <img
-                        src={`${IMAGE_PATH + movie.poster_path}`}
-                        alt=""
-                        className="movie-img img-fluid rounded"
-                    />
+        <div>
+            <div className="movie-container">
+                <div className='navbar-search container'>
+                    <Navbar onSearch={handleSearch} />
                 </div>
-                <div className="movie-text-container">
-                    <h1 className="movie-title">{movie.title}</h1>
-                          <p className="movie-description">{movie.description}</p>
+                <div className="movie-details-container container">
+                    <div className="row">
+                        <div className="col-sm">
+                            <div className="movie-image-container">
+                                <img
+                                    src={`${IMAGE_PATH + movie.poster_path}`}
+                                    alt=""
+                                    className="movie-img img-fluid rounded"
+                                />
+                            </div>
+                        </div>
+                        <div className="col-sm text-container">
+                            <div className="movie-text-container">
+                                <h1 className="movie-title">{movie.title}</h1>
+                                <p className="text-white">{movie.overview}</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     );
 }
-

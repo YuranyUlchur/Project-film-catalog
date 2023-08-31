@@ -1,47 +1,37 @@
+/*style Navbar*/
 .navbar {
     color: #fff;
     margin-bottom: 400px;
-
 }
-
 
 .navbar-brand {
     font-size: 1.5rem;
     color: #fff;
-    margin-left: 100px;
+    font-weight: bold;
+}
+
+.link-brand{
+    text-decoration: none;
 }
 
 .navbar-toggler-icon {
     background-color: #fff;
 }
 
-.navbar-nav .nav-link {
+.nav-home{
+    font-size: 1.1rem;
     color: #fff;
-    margin-right: 20px;
+    font-weight: bold;
 }
 
-.dropdown-menu {
-    background-color: #333;
+.link-home{
+    text-decoration: none;
 }
-
-.dropdown-item {
-    color: #fff;
-}
-
-
 
 .containernavbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-
-}
-
-.ml-auto {
-    display: flex;
-    align-items: center;
-
 }
 
 .input-form {
