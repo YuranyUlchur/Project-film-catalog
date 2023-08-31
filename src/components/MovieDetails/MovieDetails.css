@@ -1,11 +1,8 @@
-/* style MovieDetails*/
+/* style MovieDetails */
 
-.navbar-search {
-    position: absolute;
-}
 .movie-container {
     background-color: #080f28;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    min-height: 100vh;
 }
 
 .movie-details-container {
@@ -14,29 +11,32 @@
 }
 
 .movie-img {
-    margin-top: 100px;
+    margin-top: 20px;
     width: 100%;
+    max-width: 100%;
     height: auto;
     border-radius: 5px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
 .movie-text-container {
-    flex: 1;
+    padding: 20px;
 }
 
 .movie-title {
     color: #f1ecec;
     font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .text-white {
     color: #f1ecec;
     font-size: 18px;
-    max-width: 80%;
+    max-width: 100%;
 }
 
 .text-container {
+
     align-items: center;
     display: flex;
 }

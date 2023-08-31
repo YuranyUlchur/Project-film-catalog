@@ -21,14 +21,14 @@ export const MovieList = ({ movies, selectMovie, URL_IMAGE, onMovieClick }) => {
                             <img
                                 src={`${URL_IMAGE + movie.poster_path}`}
                                 alt=""
-                                height={400}
+                                height={470}
                                 width="100%"
                                 className="movie-poster"
                             />
 
                         </Link>
                         <div>
-                            <h4 className="movietitle">{movie.title}</h4>
+                            <h4 className="movietitle text-white">{movie.title}</h4>
                         </div>
 
                     </div>

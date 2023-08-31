@@ -1,5 +1,4 @@
 /* style MovieList*/
-
 .movie-card {
     border: 1px solid #ccc;
     padding: 15px;
@@ -18,8 +17,4 @@
     max-height: 400px;
 }
 
-.movietitle {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    color: #f1ecec !important;
-}
+
