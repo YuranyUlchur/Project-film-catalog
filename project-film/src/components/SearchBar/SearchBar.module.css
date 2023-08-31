@@ -1,0 +1,19 @@
+/* style SearchBarch*/
+.container-form {
+    padding: 50px;
+    margin-right: 400px;
+}
+
+.input-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.button-search {
+    background-color:#f86e56;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
