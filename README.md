@@ -2,7 +2,7 @@
 
 <img align="center" src="https://img.freepik.com/psd-premium/ve-al-icono-peliculas-ilustracion-3d_1419-2611.jpg?w=2000" />
 
-Welcome to my film project repository catalog🙋🏻‍♀️! Aquí catalogo web donde se muestren las ultimas películas que están en cartelera. con react, bootstrap y demas tecnologias para conocer mis habilidades de desarrollo frontend.
+Welcome to my film project repository catalog🙋🏻‍♀️! Here I catalog web where the latest movies are shown. with react, bootstrap and other technologies to know my frontend development skills.
 
 ## Project Description📃
 
