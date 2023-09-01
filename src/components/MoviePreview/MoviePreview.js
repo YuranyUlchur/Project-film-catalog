@@ -4,8 +4,6 @@ import styles from './MoviePreview.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // MoviePreview component
-// MoviePreview component
-// MoviePreview component
 export const MoviePreview = ({ movie, playing, trailer, setPlaying }) => {
     const playTrailer = () => {
         if (trailer) {
@@ -34,7 +32,7 @@ export const MoviePreview = ({ movie, playing, trailer, setPlaying }) => {
                                     )}
                                 </div>
                             </div>
-                            
+                            {/*player implementation*/}
                             {playing && trailer && (
                                 <>
                                     <YouTube

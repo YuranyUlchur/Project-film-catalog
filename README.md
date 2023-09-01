@@ -1,5 +1,6 @@
 # Skills Practice with React💗👋 project.💗👋
 
+<img align="center" src="https://img.freepik.com/psd-premium/ve-al-icono-peliculas-ilustracion-3d_1419-2611.jpg?w=2000" />
 
 Welcome to my film project repository catalog🙋🏻‍♀️! Aquí catalogo web donde se muestren las ultimas películas que están en cartelera. con react, bootstrap y demas tecnologias para conocer mis habilidades de desarrollo frontend.
 
@@ -7,7 +8,8 @@ Welcome to my film project repository catalog🙋🏻‍♀️! Aquí catalogo w
 
 The objective of this project is to apply my knowledge, to make a web catalog where the latest movies that are on the billboard🎬.
 
-
+## Site Web🌐
+https://bejewelled-rugelach-371633.netlify.app
 ##  Installation 📥
 
 Follow these steps to set up the project in your local environment:

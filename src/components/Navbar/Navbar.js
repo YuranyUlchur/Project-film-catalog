@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 export const Navbar = ({ onSearch }) => {
     const [searchKey, setSearchKey] = useState('');
-
+    // implementation of a key for movie search in search
     const searchMovies = (e) => {
         e.preventDefault();
         console.log(`Searching for: ${searchKey}`);
@@ -16,6 +16,7 @@ export const Navbar = ({ onSearch }) => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light">
             <div className="container">
+                {/*name page*/}
                 <Link className="navbar-brand" to="/">
                     <FaFilm /> Film catalog
                 </Link>
