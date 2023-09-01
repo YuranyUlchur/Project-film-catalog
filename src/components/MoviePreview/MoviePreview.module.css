@@ -14,7 +14,7 @@
     background-position: center;
     min-height: 500px;
     position: relative;
-    overflow: hidden; /* Added overflow property to contain the video */
+    overflow: hidden;
 }
 
 .reproductor {
@@ -76,6 +76,14 @@
     top: 70%;
     transform: translateX(-50%);
     
+}
+
+@media (max-width: 1280px) {
+    .titlemovie {
+        top: 60%;
+        left: 50%;
+
+    }
 }
 
 @media (max-width: 828px) {

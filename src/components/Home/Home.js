@@ -61,7 +61,7 @@ export const Home = () => {
     const selectMovie = async (selectedMovie) => {
         fetchMovie(selectedMovie.id);
         setMovie(selectedMovie);
-        window.scrollTo(0, 0);
+        window.scrollTo(0, 0);//banner update depending on the movie
     };
 
     // Handle search

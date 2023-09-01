@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './SearchBar.module.css'; // Importing styles for the SearchBar component
-import { FaSistrix } from "react-icons/fa6"; // Importing the FaSistrix icon from the react-icons/fa6 package
+import './SearchBar.module.css'; 
+import { FaSistrix } from "react-icons/fa6";
 
 // Defining the SearchBar component using a functional component approach
 export const SearchBar = ({ onSearch }) => {

@@ -16,11 +16,11 @@ Follow these steps to set up the project in your local environment:
 
 1. Clone the repository:
 
-	   git clone https://github.com/YuranyUlchur/mypageweb.github.io.git
+	   git clone https://github.com/YuranyUlchur/Project-film-catalog.git
 
 2. Navigate to the project directory:
 
-	   cd holbie-talent-hub-client
+	   cd Project-film-catalog
 
 3. Install dependencies using npm or yarn
 
