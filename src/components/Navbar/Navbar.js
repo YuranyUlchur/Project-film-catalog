@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaFilm } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Navbar.css';
+import styles from './Navbar.module.css';
 import { SearchBar } from '../SearchBar/SearchBar';
 import { Link } from "react-router-dom";
 
@@ -17,7 +17,7 @@ export const Navbar = ({ onSearch }) => {
         <nav className="navbar navbar-expand-lg navbar-light">
             <div className="container">
                 {/*name page*/}
-                <Link className="navbar-brand" to="/">
+                <Link className={styles.titlepage} to="/">
                     <FaFilm /> Film catalog
                 </Link>
 
@@ -36,7 +36,7 @@ export const Navbar = ({ onSearch }) => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/">
+                            <Link className={styles.navlink} to="/">
                                 Home
                             </Link>
                         </li>

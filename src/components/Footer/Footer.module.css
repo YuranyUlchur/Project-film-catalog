@@ -1,0 +1,108 @@
+.footer {
+    padding: 50px;
+    margin-top: 100px;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+hr {
+    border: 1px solid rgb(255, 255, 255);
+    width: 50%;
+    margin-bottom: 40px;
+}
+.rowfooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.titlepage{
+    font-size: 30px;
+    margin-left: 200px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.iconscontact {
+    margin-right: 200px;
+}
+
+.btnSocial {
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+}
+
+
+a.btnSocial:hover {
+    color: #007bff;
+}
+
+.footer {
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.footerHeading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footerBottom {
+    padding: 10px 0;
+    text-align: center;
+    color: rgb(245, 245, 240);
+}
+
+.btnSocial {
+    margin-right: 10px;
+    color: rgb(245, 245, 240);
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.dividerCustom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.dividerCustomLine {
+    flex-grow: 3;
+    height: 1px;
+    background-color: rgb(245, 245, 240);
+}
+
+.dividerCustomIcon {
+    margin: 0 20px;
+    color: rgb(245, 245, 240);
+}
+
+@media (max-width: 768px) {
+    .rowfooter {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .titlepage,
+    .titlecontact,
+    .iconscontact {
+        margin: 0;
+    }
+
+    .btnSocial {
+        width: 100%;
+        max-width: none;
+    }
+}

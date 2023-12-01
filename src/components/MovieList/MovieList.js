@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './MovieList.module.css';
+import styles from './MovieList.module.css';
 
 
 // MovieList component definition
 export const MovieList = ({ movies, selectMovie, URL_IMAGE, onMovieClick }) => {
     return (
-        <div className="container mt-3">
+        <div className="container ">
+            <h3 className={styles.titlefilm}>PELICULAS MAS VISTAS</h3>
+            <hr></hr>
             <div className="row">
                 {movies.map((movie) => (
                     <div
@@ -28,7 +30,7 @@ export const MovieList = ({ movies, selectMovie, URL_IMAGE, onMovieClick }) => {
 
                         </Link>
                         <div>
-                            <h4 className="movietitle text-white">{movie.title}</h4>
+                            <h4 className={styles.movietitle}>{movie.title}</h4>
                         </div>
 
                     </div>

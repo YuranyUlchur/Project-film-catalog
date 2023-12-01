@@ -3,8 +3,8 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { MovieList } from '../MovieList/MovieList';
 import { Navbar } from '../Navbar/Navbar';
-import { MoviePreview } from '../MoviePreview/MoviePreview';
 import './Home.css';
+import { Footer } from '../Footer/Footer';
 
 export const Home = () => {
     // API configurations
@@ -15,8 +15,9 @@ export const Home = () => {
     // States to manage various aspects of the component
     const [movies, setMovies] = useState([]);
     const [trailer, setTrailer] = useState(null);
-    const [movie, setMovie] = useState({ title: "Loading Movies..." });
     const [playing, setPlaying] = useState(false);
+    const [movie, setMovie] = useState({ title: "Loading Movies..." });
+    
 
 
     // Fetch movies from API based on search term or discover
@@ -78,28 +79,26 @@ export const Home = () => {
         <div className="boxapp">
             <div
                 style={{
-                    overflow: 'hidden',
                     backgroundImage: `url("${IMAGE_PATH}${movie.backdrop_path}")`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     height: '700px',
-                    marginBottom: '100px',
                     opacity: '0.9',
+                    marginBottom: '70px',
                 }}
             >
                 {/* Navbar for search */}
                 <Navbar onSearch={handleSearch} />
                 {/* Display movie preview */}
-                <MoviePreview
-                    movie={movie}
-                    playing={playing}
-                    trailer={trailer}
-                    setPlaying={setPlaying}
-                    IMAGE_PATH={IMAGE_PATH}
-                />
+                
+
             </div>
+
             {/* Display list of movies */}
             <MovieList movies={movies} selectMovie={selectMovie} URL_IMAGE={IMAGE_PATH} />
+            <Footer />
+
         </div>
+
     );
 };
