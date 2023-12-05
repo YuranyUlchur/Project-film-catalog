@@ -2,11 +2,7 @@
 .boxmain {
     margin-bottom: 100px;
 }
-.viewtrailer {
-    background-size: cover;
-    background-position: center;
 
-}
 
 .buttonclose {
     background-color: #f86e56;
@@ -17,14 +13,15 @@
     cursor: pointer;
     font-size: 16px;
     position: absolute;
-    bottom: 50px;
 }
 
 
 .boxbuttontrailer {
-    margin-left: 250px;
-    margin-top: 60px;
-    height: 100%;
+    position: absolute;
+    top: 705px;
+    left: 690px;
+  
+
     
 }
 
@@ -41,20 +38,21 @@
 .titlemovie {
     color: #f1ecec;
     position: absolute;
-    margin-top: 140px;
-    left: 50px;
+    top: 700px;
+    left: 590px;
     
 }
 
 @media (max-width: 768px) {
     .titlemovie {
-        top: 79px;
-        left: 100px;
+        top: 710px;
+        left: 130px;
+        position: absolute;
 
     }
 
-    .buttontrailer{
-        left: 100px;
+    .boxbuttontrailer {
+        left: 230px;
     }
 }
 

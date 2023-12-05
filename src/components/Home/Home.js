@@ -5,6 +5,8 @@ import { MovieList } from '../MovieList/MovieList';
 import { Navbar } from '../Navbar/Navbar';
 import './Home.css';
 import { Footer } from '../Footer/Footer';
+import { MoviePreview } from '../MoviePreview/MoviePreview';
+
 
 export const Home = () => {
     // API configurations
@@ -90,6 +92,13 @@ export const Home = () => {
                 {/* Navbar for search */}
                 <Navbar onSearch={handleSearch} />
                 {/* Display movie preview */}
+                <MoviePreview
+                    movie={movie}
+                    playing={playing}
+                    trailer={trailer}
+                    setPlaying={setPlaying}
+                    IMAGE_PATH={IMAGE_PATH}
+                />
                 
 
             </div>

@@ -7,21 +7,14 @@ import { Navbar } from '../Navbar/Navbar';
 import { Footer } from '../Footer/Footer';
 
 
-
-
 export const MovieDetails = () => {
     // API URLs and keys
     const API_URL = "https://api.themoviedb.org/3";
     const API_KEY = "4f5f43495afcc67e9553f6c684a82f84";
     const IMAGE_PATH = "https://image.tmdb.org/t/p/original";
 
-
-
     // State declarations
     const [movies, setMovies] = useState([]);
-    {/*const [playing, setPlaying] = useState(false);
-const [trailer, setTailer] = useState(null);*/}
-
 
     // Fetch movies from API
     const fetchMovies = useCallback(async (searchTerm) => {
@@ -52,8 +45,6 @@ const [trailer, setTailer] = useState(null);*/}
         });
 
     };
-    
-    
 
     useEffect(() => {
         // Initial fetch of movies
@@ -98,22 +89,11 @@ const [trailer, setTailer] = useState(null);*/}
                                 <p className="text-white">{movie.overview}</p>
                             </div>
                         </div>
-
+                        
                     </div>
-
-                    
                 </div>
-                {/*<MoviePreview
-                        movie={movie}
-                        playing={playing}
-                        trailer={trailer}
-                        setPlaying={setPlaying}
-                        IMAGE_PATH={IMAGE_PATH}
-                    />*/}
-                
-                <Footer />
+                <Footer/>
             </div>
-
         </div>
     );
 }
