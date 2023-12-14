@@ -86,7 +86,9 @@ export const Home = () => {
                     backgroundPosition: 'center',
                     height: '700px',
                     opacity: '0.9',
-                    marginBottom: '70px',
+                    marginBottom: '190px',
+                    position: 'relative',
+
                 }}
             >
                 {/* Navbar for search */}
