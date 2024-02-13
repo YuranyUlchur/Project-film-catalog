@@ -1,0 +1,93 @@
+/* MovieDetails.module.css */
+.movieContainer {
+    background-color: #080f28;
+    min-height: 100vh;
+}
+
+.movieDetailsContainer {
+    display: flex;
+    align-items: center;
+}
+
+.movieImageContainer {
+    margin-top: 20px;
+}
+
+.movieImg {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.movieTextContainer {
+    padding: 20px;
+    margin-top: 270px;
+}
+
+.movieTitle {
+    color: #f1ecec;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.textWhite {
+    color: #f1ecec;
+    font-size: 18px;
+    max-width: 100%;
+}
+
+.textContainer {
+    align-items: center;
+    display: flex;
+}
+
+.buttonClose {
+    background-color: #f86e56;
+    color: #f1ecec;
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+}
+
+.boxButtonTrailer {
+    position: absolute;
+    top: 80%;
+}
+
+.buttonTrailer {
+    background-color: #f86e56;
+    color: #f1ecec;
+    padding: 10px 50px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.expandButton {
+    cursor: pointer;
+    color: blue;
+    margin-left: 5px;
+}
+
+.containerExpandedText {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 480px) {
+
+    .boxButtonTrailer {
+        top: 125%;
+    }
+
+    .movieTextContainer {
+        margin-top: 100px;
+    }
+
+}

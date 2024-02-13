@@ -19,7 +19,7 @@ export const Home = () => {
     const [trailer, setTrailer] = useState(null);
     const [playing, setPlaying] = useState(false);
     const [movie, setMovie] = useState({ title: "Loading Movies..." });
-    
+
 
 
     // Fetch movies from API based on search term or discover
@@ -79,37 +79,36 @@ export const Home = () => {
 
     return (
         <div className="boxapp">
-            <div
+
+            <div className="div-con-difuminado"
+
                 style={{
                     backgroundImage: `url("${IMAGE_PATH}${movie.backdrop_path}")`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
-                    height: '700px',
+                    height: '660px',
                     opacity: '0.9',
                     marginBottom: '190px',
                     position: 'relative',
-
                 }}
             >
                 {/* Navbar for search */}
                 <Navbar onSearch={handleSearch} />
-                {/* Display movie preview */}
-                <MoviePreview
-                    movie={movie}
-                    playing={playing}
-                    trailer={trailer}
-                    setPlaying={setPlaying}
-                    IMAGE_PATH={IMAGE_PATH}
-                />
-                
-
             </div>
 
+            {/* Display movie preview */}
+            <MoviePreview
+                movie={movie}
+                playing={playing}
+                trailer={trailer}
+                setPlaying={setPlaying}
+                IMAGE_PATH={IMAGE_PATH}
+            />
             {/* Display list of movies */}
             <MovieList movies={movies} selectMovie={selectMovie} URL_IMAGE={IMAGE_PATH} />
             <Footer />
 
-        </div>
+        </div >
 
     );
 };
